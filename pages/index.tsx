@@ -225,7 +225,12 @@ export default function Home() {
             <div className="font-bold">New</div>
 
             <div className="text-xs flex items-center">
-            <span className="font-bold mr-1">Fuel:</span>
+              <span className="font-bold mr-1">Fuel:</span>
+              <select id="dropdownxxxxxxxx">
+                <option value="Disel">Option A</option>
+                <option value="B">Option B</option>
+                <option value="C">Option C</option>
+              </select>
               <span className="font-bold mr-1">Year:</span>
               <select value={year} onChange={(e) => setYear(e.target.value)}>
                 {labels?.map((i) => (
