@@ -49,7 +49,7 @@ type TopPriceByYearData = ResponseData<{ price: string; name: string; }>;
 // prettier-ignore
 type OrderByBrandYearData = ResponseData<{ name: string; order_count: string; }>;
 
-type PriceByYearAndFuelData = ResponseData<{ price: string; year: string; }>;
+type PriceByYearAndFuelData = ResponseData<{ name: string; price: string; }>;
 
 function RankList({
   data,
@@ -246,8 +246,8 @@ export default function Home() {
             bg="bg-orange-50"
             data={
               priceByYearAndFuelData?.data.rows.slice(0, 10).map((i) => ({
-                name: i.price,
-                value: i.year,
+                name: i.name,
+                value: Number(i.price),
               })) ?? []
             }
           />
