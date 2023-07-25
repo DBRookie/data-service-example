@@ -222,7 +222,7 @@ export default function Home() {
 
         <div className="shadow-xl bg-white rounded p-4 flex-1 flex-shrink-0 md:w-[49%]">
           <header className="flex justify-between">
-            <div className="font-bold">Our new chart</div>
+            <div className="font-bold">New</div>
 
             <div className="text-xs flex items-center">
             <span className="font-bold mr-1">Fuel:</span>
@@ -238,8 +238,8 @@ export default function Home() {
           </header>
 
           <div className="flex justify-between mt-3 mb-2 text-xs font-bold text-gray-500">
+            <div>Name</div>
             <div>Price</div>
-            <div>Year</div>
           </div>
           <RankList
             bg="bg-orange-50"
