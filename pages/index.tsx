@@ -141,8 +141,7 @@ export default function Home() {
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
     {
-      data: priceByYearAndFuelData?.data.rows
-        .map((i) => Number(i.price)),
+      data: priceByYearAndFuelData?.data.rows.map((i) => Number(i.price)),
       label: "Price by Year and Fuel",
       borderColor: "rgb(75, 192, 192)",
       backgroundColor: "rgba(75, 192, 192, 0.5)",
