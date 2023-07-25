@@ -246,8 +246,8 @@ export default function Home() {
             bg="bg-orange-50"
             data={
               priceByYearAndFuelData?.data.rows.slice(0, 10).map((i) => ({
-                price: i.price,
-                year: i.year,
+                name: i.price,
+                value: i.year,
               })) ?? []
             }
           />
