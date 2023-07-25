@@ -107,7 +107,7 @@ export default function Home() {
     fetcher as Fetcher<TopPriceByYearData, string>
   );
   const { data: priceByYearAndFuelData } = useSWR(
-    `/api/gateway/price_by_year_and_fuel?year=${year}`,
+    `/api/gateway/get_price_by_year_and_fuel?year=${year}`,
     fetcher as Fetcher<PriceByYearAndFuelData, string>
   );
 
