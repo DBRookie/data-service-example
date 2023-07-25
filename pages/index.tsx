@@ -239,15 +239,15 @@ export default function Home() {
           </header>
 
           <div className="flex justify-between mt-3 mb-2 text-xs font-bold text-gray-500">
-            <div>Name</div>
             <div>Price</div>
+            <div>Year</div>
           </div>
           <RankList
             bg="bg-orange-50"
             data={
               priceByYearAndFuelData?.data.rows.slice(0, 10).map((i) => ({
                 price: i.price,
-                year: Number(i.year),
+                year: i.year,
               })) ?? []
             }
           />
