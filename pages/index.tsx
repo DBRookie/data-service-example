@@ -49,7 +49,7 @@ type TopPriceByYearData = ResponseData<{ price: string; name: string; }>;
 // prettier-ignore
 type OrderByBrandYearData = ResponseData<{ name: string; order_count: string; }>;
 
-type PriceByYearAndFuelData = ResponseData<{ name: string; price: string; }>;
+type PriceByYearAndFuelData = ResponseData<{ price: string; name: string; }>;
 
 function RankList({
   data,
@@ -139,13 +139,13 @@ export default function Home() {
       label: "Average Selling Price (K)",
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-    {
-      data: priceByYearAndFuelData?.data.rows.map((i) => i.name),
-      label: "Price by Year and Fuel",
-      borderColor: "rgb(75, 192, 192)",
-      backgroundColor: "rgba(75, 192, 192, 0.5)",
     }
+    // {
+    //   data: priceByYearAndFuelData?.data.rows.map((i) => i.name),
+    //   label: "Price by Year and Fuel",
+    //   borderColor: "rgb(75, 192, 192)",
+    //   backgroundColor: "rgba(75, 192, 192, 0.5)",
+    // }
   ];
 
   return (
@@ -225,6 +225,7 @@ export default function Home() {
             <div className="font-bold">Our new chart</div>
 
             <div className="text-xs flex items-center">
+            <span className="font-bold mr-1">Fuel:</span>
               <span className="font-bold mr-1">Year:</span>
               <select value={year} onChange={(e) => setYear(e.target.value)}>
                 {labels?.map((i) => (
