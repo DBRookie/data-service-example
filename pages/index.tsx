@@ -49,6 +49,8 @@ type TopPriceByYearData = ResponseData<{ price: string; name: string; }>;
 // prettier-ignore
 type OrderByBrandYearData = ResponseData<{ name: string; order_count: string; }>;
 
+type PriceByYearAndFuelData = ResponseData<{ price: string; year: string; fuel: string }>;
+
 function RankList({
   data,
   bg,
@@ -104,6 +106,10 @@ export default function Home() {
     `/api/gateway/price_by_brand_year?year=${year}`,
     fetcher as Fetcher<TopPriceByYearData, string>
   );
+  const { data: priceByYearAndFuelData } = useSWR(
+    `/api/gateway/price_by_year_and_fuel?year=${year}`,
+    fetcher as Fetcher<PriceByYearAndFuelData, string>
+  );
 
   const options = {
     responsive: true,
@@ -133,6 +139,14 @@ export default function Home() {
       label: "Average Selling Price (K)",
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
+    },
+    {
+      data: priceByYearAndFuelData?.data.rows
+        .filter((i) => i.fuel === "Diesel") // Filter by fuel type (example: Diesel)
+        .map((i) => Number(i.price)),
+      label: "Price by Year and Fuel (Diesel)", // Label for the new dataset
+      borderColor: "rgb(75, 192, 192)",
+      backgroundColor: "rgba(75, 192, 192, 0.5)",
     },
   ];
 
