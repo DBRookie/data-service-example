@@ -227,7 +227,7 @@ export default function Home() {
             <div className="text-xs flex items-center">
               <span className="font-bold mr-1">Fuel:</span>
               <select id="dropdownxxxxxxxx">
-                <option value="Disel">Option A</option>
+                <option value="A">Diesel</option>
                 <option value="B">Option B</option>
                 <option value="C">Option C</option>
               </select>
