@@ -147,7 +147,7 @@ export default function Home() {
       label: "Price by Year and Fuel",
       borderColor: "rgb(75, 192, 192)",
       backgroundColor: "rgba(75, 192, 192, 0.5)",
-    },
+    }
   ];
 
   return (
