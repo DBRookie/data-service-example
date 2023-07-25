@@ -142,7 +142,7 @@ export default function Home() {
     },
     {
       data: priceByYearAndFuelData?.data.rows
-        .filter((i) => i.year === year) // Filter by year
+        .filter((i) => i.name === name) // Filter by year
         .map((i) => Number(i.price)),
       label: "Price by Year and Fuel",
       borderColor: "rgb(75, 192, 192)",
