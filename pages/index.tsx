@@ -142,9 +142,9 @@ export default function Home() {
     },
     {
       data: priceByYearAndFuelData?.data.rows
-        .filter((i) => i.fuel === "Diesel") // Filter by fuel type (example: Diesel)
+        .filter((i) => i.year === year) // Filter by year
         .map((i) => Number(i.price)),
-      label: "Price by Year and Fuel (Diesel)", // Label for the new dataset
+      label: "Price by Year and Fuel",
       borderColor: "rgb(75, 192, 192)",
       backgroundColor: "rgba(75, 192, 192, 0.5)",
     },
