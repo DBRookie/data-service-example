@@ -49,7 +49,7 @@ type TopPriceByYearData = ResponseData<{ price: string; name: string; }>;
 // prettier-ignore
 type OrderByBrandYearData = ResponseData<{ name: string; order_count: string; }>;
 
-type PriceByYearAndFuelData = ResponseData<{ price: string; name: string; }>;
+type PriceByYearAndFuelData = ResponseData<{ price: string; year: string; }>;
 
 function RankList({
   data,
